@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
 app.get('/',(req,res)=>{
-    return "hello developers";
+    return res.send("hello developers");
 });
 
  app.listen(process.env.PORT||3000,()=>{
