@@ -118,43 +118,7 @@ app.get('/month_transaction',(req,res)=>{
                 day:25,
                 money:"u"
             }
-        ],
-        transactions:[
-            {
-                day:1,
-                consumption:"-14,000",
-                transaction:[
-                    {
-                        img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/hanalogo.png",
-                        money:"12,000",
-                        content:"홍두깨"
-                    },
-                    {
-                        img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/ibklogo.png",
-                        money:"-6,000",
-                        content:"스타벅스"
-                    }
-                ]
-            },
-            {
-                day:2,
-                consumption:"11,000",
-                transaction:[
-                    {
-                        img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/ibklogo.png",
-                        money:"15,000",
-                        content:"김감자"
-                    },
-                    {
-                        img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/urilogo.png",
-                        money:"-4,000",
-                        content:"교보문고"
-                    }
-                ]
-            },
-
         ]
-
     })
       
 })
@@ -162,7 +126,166 @@ app.get('/month_transaction',(req,res)=>{
 
 app.get('/month_transaction_datail',(req,res)=>{
 
-    return res.json({success:true});
+    var day=Number(req.query('day'));
+
+    if(day==1){
+        return res.json({
+            day:1,
+            consumption:"-14,000",
+            transaction:[
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/hanalogo.png",
+                    money:"12,000",
+                    content:"홍두깨"
+                },
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/ibklogo.png",
+                    money:"-6,000",
+                    content:"스타벅스"
+                }
+            ]
+        })
+
+    }
+    else if(day==15){
+        return res.json({
+            day:15,
+            consumption:"-14,000",
+            transaction:[
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/hanalogo.png",
+                    money:"12,000",
+                    content:"홍두깨"
+                },
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/ibklogo.png",
+                    money:"-6,000",
+                    content:"스타벅스"
+                }
+            ]
+        })
+
+    }
+    else if(day==16){
+        return res.json({
+            day:16,
+            consumption:"-14,000",
+            transaction:[
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/hanalogo.png",
+                    money:"12,000",
+                    content:"홍두깨"
+                },
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/ibklogo.png",
+                    money:"-6,000",
+                    content:"스타벅스"
+                }
+            ]
+        })
+
+    }
+    else if(day==18){
+
+        return res.json({
+            day:18,
+            consumption:"-14,000",
+            transaction:[
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/hanalogo.png",
+                    money:"12,000",
+                    content:"홍두깨"
+                },
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/ibklogo.png",
+                    money:"-6,000",
+                    content:"스타벅스"
+                }
+            ]
+        })
+
+
+    }
+    else if(day==20){
+
+        return res.json({
+            day:20,
+            consumption:"-14,000",
+            transaction:[
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/hanalogo.png",
+                    money:"12,000",
+                    content:"홍두깨"
+                },
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/ibklogo.png",
+                    money:"-6,000",
+                    content:"스타벅스"
+                }
+            ]
+        })
+
+    }
+    else if(day==21){
+
+        return res.json({
+            day:21,
+            consumption:"-14,000",
+            transaction:[
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/hanalogo.png",
+                    money:"12,000",
+                    content:"홍두깨"
+                },
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/ibklogo.png",
+                    money:"-6,000",
+                    content:"스타벅스"
+                }
+            ]
+        })
+
+    }
+    else if(day==25){
+
+        return res.json({
+            day:25,
+            consumption:"-14,000",
+            transaction:[
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/hanalogo.png",
+                    money:"12,000",
+                    content:"홍두깨"
+                },
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/ibklogo.png",
+                    money:"-6,000",
+                    content:"스타벅스"
+                }
+            ]
+        })
+
+    }
+    else{
+        return res.json({
+            day:0,
+            consumption:"-14,000",
+            transaction:[
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/hanalogo.png",
+                    money:"12,000",
+                    content:"홍두깨"
+                },
+                {
+                    img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/ibklogo.png",
+                    money:"-6,000",
+                    content:"스타벅스"
+                }
+            ]
+        })
+
+    }
+    
 })
 
 
