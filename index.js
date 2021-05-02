@@ -160,6 +160,11 @@ app.get('/month_transaction',(req,res)=>{
 })
 
 
+app.get('/month_transaction_datail',(req,res)=>{
+
+    return res.json({success:true});
+})
+
 
 
  app.listen(process.env.PORT||3000,()=>{
