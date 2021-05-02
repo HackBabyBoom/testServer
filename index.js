@@ -85,6 +85,83 @@ app.get('/transaction',(req,res)=>{
     })
 })
 
+
+
+app.get('/month_transaction',(req,res)=>{
+    return res.json({
+        up_down:[
+            {
+                day:1,
+                money:"u"
+            },
+            {
+                day:15,
+                money:"d"
+            },
+            {
+                day:16,
+                money:"u"
+            },
+            {
+                day:18,
+                money:"d"
+            },
+            {
+                day:20,
+                money:"d"
+            },
+            {
+                day:21,
+                money:"d"
+            },
+            {
+                day:25,
+                money:"u"
+            }
+        ],
+        transactions:[
+            {
+                day:1,
+                consumption:"-14,000",
+                transaction:[
+                    {
+                        img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/hanalogo.png",
+                        money:"12,000",
+                        content:"홍두깨"
+                    },
+                    {
+                        img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/ibklogo.png",
+                        money:"-6,000",
+                        content:"스타벅스"
+                    }
+                ]
+            },
+            {
+                day:2,
+                consumption:"11,000",
+                transaction:[
+                    {
+                        img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/ibklogo.png",
+                        money:"15,000",
+                        content:"김감자"
+                    },
+                    {
+                        img_url:"https://babyboom.s3-ap-northeast-1.amazonaws.com/urilogo.png",
+                        money:"-4,000",
+                        content:"교보문고"
+                    }
+                ]
+            },
+
+        ]
+
+    })
+      
+})
+
+
+
+
  app.listen(process.env.PORT||3000,()=>{
     console.log('server is listening'); 
  });
